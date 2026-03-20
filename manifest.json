@@ -1,0 +1,44 @@
+{
+  "name": "TKY Squad",
+  "short_name": "TKY Squad",
+  "description": "12th Gujarat Board Commerce \u00b7 TKY Squad",
+  "start_url": "/TKY/",
+  "scope": "/TKY/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#5C3030",
+  "theme_color": "#5C3030",
+  "lang": "gu",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "url": "/TKY/#quiz",
+      "description": "Start daily quiz"
+    },
+    {
+      "name": "Papers",
+      "short_name": "Papers",
+      "url": "/TKY/#papers",
+      "description": "View papers"
+    }
+  ]
+}
