@@ -4236,32 +4236,7 @@ function renderAdminSettings(panel) {
         <button class="admin-save-btn" onclick="saveTgLink()">Save Link</button>
       </div>
     </div>
-    <div class="admin-card">
-      <div class="admin-card-head"><span class="admin-card-title">Per-User Access — Setup</span></div>
-      <div style="padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-size:11px;color:var(--g500);line-height:1.6">Run this SQL in your Supabase Dashboard → SQL Editor to enable per-user access control:</div>
-        <div id="ua-sql-code" style="background:var(--g900);color:#7fd4cf;border-radius:var(--rm);padding:12px;font-size:10px;font-family:monospace;white-space:pre;overflow-x:auto;line-height:1.7">create table if not exists user_paper_access (
-  id bigserial primary key,
-  user_id uuid references auth.users(id) on delete cascade,
-  paper_id bigint,
-  unlocked boolean default true,
-  unique(user_id, paper_id)
-);
-create table if not exists user_material_access (
-  id bigserial primary key,
-  user_id uuid references auth.users(id) on delete cascade,
-  subj_id text,
-  ch_idx int,
-  unlocked boolean default true,
-  unique(user_id, subj_id, ch_idx)
-);
-alter table user_paper_access enable row level security;
-alter table user_material_access enable row level security;
-create policy "admin_all_upa" on user_paper_access for all using (true) with check (true);
-create policy "admin_all_uma" on user_material_access for all using (true) with check (true);</div>
-        <button class="admin-save-btn" style="background:var(--g800)" onclick="navigator.clipboard?.writeText(document.getElementById('ua-sql-code').textContent||'').then(()=>showToast('SQL copied! ✅','ok'))">Copy SQL</button>
-      </div>
-    </div>
+    
       <div style="padding:14px;display:flex;flex-direction:column;gap:8px">
         <button class="admin-save-btn" style="background:#dc2626" onclick="resetAllPapers()">Reset Papers to Default</button>
         <button class="admin-save-btn" style="background:#dc2626" onclick="resetAllQuiz()">Reset Quiz to Default</button>
