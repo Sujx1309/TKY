@@ -4097,7 +4097,7 @@ let SW_REG = null;
 
 // ── VAPID Public Key — replace with your own from: npx web-push generate-vapid-keys ──
 // IMPORTANT: Aa key match karvi joiye jo tu Edge Function ma vapak kare chhe
-const VAPID_PUBLIC_KEY = 'BC8wanRc03xQnoZb_J5kJD-H4pJ1P8wz_pMTNORuDSdzxUiczvp6W6ePJ6QSXYLjo7tpOt4H2IhP65gyWkBdDBo';
+const VAPID_PUBLIC_KEY = 'BLqOoDJFcyc2Co64QCGhOHINmIkFFIA2up7aSgvDK7v6zvD5vmxXsz24F6rymEMq6SMzNr7J77IpAYgE8etpSvM';
 
 function _urlBase64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
@@ -4126,7 +4126,7 @@ async function initPushNotifications() {
     localStorage.setItem('ck_push_enabled', '1');
 
     // Check if VAPID key is configured
-    if (VAPID_PUBLIC_KEY === 'BA0LledFq6ZmiPnawH6EGmm8g1GPxsaemc-tuH5Yrgn0cPwyAJp7k2lkRhvMKgCSUPvcDnc3oT6Nq7tA9BjKc64') {
+    if (VAPID_PUBLIC_KEY === 'BLqOoDJFcyc2Co64QCGhOHINmIkFFIA2up7aSgvDK7v6zvD5vmxXsz24F6rymEMq6SMzNr7J77IpAYgE8etpSvM') {
       showToast('🔔 Notifications enabled! (VAPID key set kar)', 'ok');
       return true;
     }
