@@ -1334,7 +1334,7 @@ document.addEventListener('touchmove', e => {
 const SUPA_URL = 'https://cjprtnhevnrfrdtinlnv.supabase.co';
 const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqcHJ0bmhldm5yZnJkdGlubG52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5MDE4NzYsImV4cCI6MjA4OTQ3Nzg3Nn0.fG8zEwwyYyQ4DJOlLYZD8J6BKEUK6v2hlveOxA5Bv-A';
 // Service Role Key — hardcoded so admin never needs to enter manually
-const SUPA_SR_KEY = localStorage.getItem('ck_service_role') || '';
+const SUPA_SR_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqcHJ0bmhldm5yZnJkdGlubG52Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzkwMTg3NiwiZXhwIjoyMDg5NDc3ODc2fQ.jDiBnde-ujsEHul6oma3Qnj7vP3wVognpPz_TWmQTtk';
 
 // ─── Read notifications set (persisted in localStorage) ──────────────────
 const READ_NOTIFS = new Set(JSON.parse(localStorage.getItem('ck_read_notifs') || '[]'));
