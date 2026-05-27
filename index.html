@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+styleTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1291,7 +1291,19 @@ html,body{margin:0;padding:0;width:100vw;height:100vh;overflow:hidden;background
   </div>
 
 </div><!-- end app -->
-
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        const reg = await navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        console.log('[App] SW registered:', reg.scope);
+        // ... (full code snippet file ma che)
+      } catch (err) {
+        console.warn('[App] SW registration failed:', err);
+      }
+    });
+  }
+</script>
 <script>
 // ══════════════════════════════════════════
 // APP SECURITY — Native app-like hardening
